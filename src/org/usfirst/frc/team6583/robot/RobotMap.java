@@ -9,9 +9,12 @@ package org.usfirst.frc.team6583.robot;
 
 
 public enum RobotMap {
-	
+	//PWM Motor Mappings
 	LEFT_MOTOR(0),
-	RIGHT_MOTOR(1);
+	RIGHT_MOTOR(1),
+	//Control Mappings
+	LEFT_JOYSTICK(0),
+	RIGHT_JOYSTICK(1);
 	
 	public final int value;
 	

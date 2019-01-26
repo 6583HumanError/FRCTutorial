@@ -14,7 +14,10 @@ public class Drivebase extends Subsystem {
 		RightMotor = new Spark(RobotMap.RIGHT_MOTOR.value);
 	}
 	
-	public void setRaw(double leftvalue, double rightvalue)
+	public void setRaw(double leftvalue, double rightvalue) {
+	LeftMotor.set(-leftvalue);
+	RightMotor.set(rightvalue);
+	}
 	
 	@Override
 	protected void initDefaultCommand() {
