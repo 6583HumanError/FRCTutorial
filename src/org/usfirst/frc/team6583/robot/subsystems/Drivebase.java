@@ -14,6 +14,8 @@ public class Drivebase extends Subsystem {
 		RightMotor = new Spark(RobotMap.RIGHT_MOTOR.value);
 	}
 	
+	public void setRaw(double leftvalue, double rightvalue)
+	
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub
