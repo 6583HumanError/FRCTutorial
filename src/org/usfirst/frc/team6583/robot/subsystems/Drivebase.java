@@ -1,6 +1,8 @@
 package org.usfirst.frc.team6583.robot.subsystems;
 
 import org.usfirst.frc.team6583.robot.*;
+import org.usfirst.frc.team6583.robot.commands.*;
+
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.command.*;
 
@@ -15,14 +17,13 @@ public class Drivebase extends Subsystem {
 	}
 	
 	public void setRaw(double leftvalue, double rightvalue) {
-	LeftMotor.set(-leftvalue);
+	LeftMotor.set(leftvalue);
 	RightMotor.set(rightvalue);
 	}
 	
 	@Override
 	protected void initDefaultCommand() {
-		// TODO Auto-generated method stub
-
+		setDefaultCommand(new TankDrive());
 	}
 
 }

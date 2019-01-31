@@ -24,5 +24,25 @@ public class OI {
 		double raw = LEFT_JOY.getX();
 		return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
 	}
+	
+	public double getLeftJoyY() {
+		double raw = LEFT_JOY.getY();
+		return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
+	}
+	
+	public double getRightJoyX() {
+		double raw = RIGHT_JOY.getX();
+		return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
+	}
+	
+	public double getRightJoyY() {
+		double raw = RIGHT_JOY.getY();
+		return Math.abs(raw) < JOY_DEADZONE ? 0.0 : raw;
+	}
+	
+	public OI() {
+		
+	}
+	
 
 }
