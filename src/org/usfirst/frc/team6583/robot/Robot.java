@@ -9,6 +9,7 @@ package org.usfirst.frc.team6583.robot;
 
 import org.usfirst.frc.team6583.robot.subsystems.*;
 
+import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -20,14 +21,16 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class Robot extends TimedRobot {
 	public static OI oi;
 	public static Drivebase drivebase;
+	public static UsbCamera camera;
 
 	@Override
 	public void robotInit() {
 		oi = new OI();
 		drivebase = new Drivebase();
 		
-		CameraServer.getInstance().startAutomaticCapture();
-		
+		camera = CameraServer.getInstance().startAutomaticCapture();
+		camera.setResolution(320, 240);
+				
 	}
 
 	@Override
